@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(XSharpMsBuildDir)\XSharp.Default.props" />
+  <PropertyGroup>
+    <ProjectGuid>6e527eea-4f43-45f7-acea-c8080d1e9f1a</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VOSDIAppXSharpSummit</RootNamespace>
+    <AssemblyName>VOSDIAppXSharpSummit</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <Name>VOSDIApp</Name>
+    <Dialect>VO</Dialect>
+    <LB>true</LB>
+    <OutputName>VOSDIApp</OutputName>
+    <Prefer32Bit>True</Prefer32Bit>
+    <Unsafe>true</Unsafe>
+    <INS>true</INS>
+    <VO1>true</VO1>
+    <VO2>true</VO2>
+    <VO3>true</VO3>
+    <VO4>true</VO4>
+    <VO5>true</VO5>
+    <VO6>true</VO6>
+    <VO7>true</VO7>
+    <VO8>true</VO8>
+    <VO9>true</VO9>
+    <VO10>true</VO10>
+    <VO11>false</VO11>
+    <VO12>false</VO12>
+    <VO13>true</VO13>
+    <VO14>false</VO14>
+    <VO15>true</VO15>
+    <VO16>true</VO16>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DisabledWarnings>9032;9043;618;162;165;649;9025</DisabledWarnings>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DisabledWarnings>9032;9043;618;162;165;649;9025</DisabledWarnings>
+  </PropertyGroup>
+  <Import Project="$(XSharpMsBuildDir)\XSharp.targets" />
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="XSharp.Core">
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="XSharp.RT">
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="XSharp.VO">
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="VOSystemClasses">
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="VOGUIClasses">
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="VORDDClasses">
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="VOWin32APILibrary">
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SDI Menus.prg" />
+    <Compile Include="Standard SDI.prg" />
+    <Compile Include="Start.prg" />
+    <Compile Include="Help About.prg" />
+    <Compile Include="Properties\AssemblyInfo.prg" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeResource Include="Standard SDI.Manifest.rc">
+      <DependentUpon>Standard SDI.prg</DependentUpon>
+    </NativeResource>
+    <NativeResource Include="SDI Menus.EmptySDIMenu.rc">
+      <DependentUpon>SDI Menus.prg</DependentUpon>
+    </NativeResource>
+    <NativeResource Include="SDI Menus.EmptySDIMenu_Accelerator.rc">
+      <DependentUpon>SDI Menus.prg</DependentUpon>
+    </NativeResource>
+    <NativeResource Include="SDI Menus.StandardSDIMenu.rc">
+      <DependentUpon>SDI Menus.prg</DependentUpon>
+    </NativeResource>
+    <NativeResource Include="SDI Menus.StandardSDIMenu_Accelerator.rc">
+      <DependentUpon>SDI Menus.prg</DependentUpon>
+    </NativeResource>
+    <NativeResource Include="SDI Menus.VS_VERSION_INFO.rc">
+      <DependentUpon>SDI Menus.prg</DependentUpon>
+    </NativeResource>
+    <NativeResource Include="Standard SDI.IDI_STANDARDICON.rc">
+      <DependentUpon>Standard SDI.prg</DependentUpon>
+    </NativeResource>
+    <NativeResource Include="Help About.HelpAbout.rc">
+      <DependentUpon>Help About.prg</DependentUpon>
+    </NativeResource>
+    <NativeResource Include="Help About.POWXSHARPBMP.rc">
+      <DependentUpon>Help About.prg</DependentUpon>
+    </NativeResource>
+  </ItemGroup>
+  <ItemGroup>
+    <VOBinary Include="SDI Menus.EmptySDIMenu.xsmnu">
+      <DependentUpon>SDI Menus.prg</DependentUpon>
+    </VOBinary>
+    <VOBinary Include="SDI Menus.StandardSDIMenu.xsmnu">
+      <DependentUpon>SDI Menus.prg</DependentUpon>
+    </VOBinary>
+    <VOBinary Include="Help About.HELPABOUT.xsfrm">
+      <DependentUpon>Help About.prg</DependentUpon>
+    </VOBinary>
+    <None Include="Properties\cavowed.inf" />
+    <None Include="Properties\cavowed.tpl" />
+    <None Include="Properties\cavoded.tpl" />
+    <None Include="Properties\cavofed.tpl" />
+    <None Include="Resources\XSharp.ICO" />
+    <None Include="Resources\HelpAbt.BMP" />
+    <None Include="Resources\cctl6.man" />
+    <None Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Petstore.Client\Petstore.Client.csproj">
+      <Name>Petstore.Client</Name>
+      <Project>{42cab4c6-6f35-4a0c-9c01-a55fde3b8653}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+</Project>

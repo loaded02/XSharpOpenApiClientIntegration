@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petstore.Client", "Petstore.Client\Petstore.Client.csproj", "{42CAB4C6-6F35-4A0C-9C01-A55FDE3B8653}"
+EndProject
+Project("{AA6C8D78-22FF-423A-9C7C-5F2393824E04}") = "VOSDIAppXSharpSummit", "VOSDIAppXSharpSummit\VOSDIAppXSharpSummit.xsproj", "{6E527EEA-4F43-45F7-ACEA-C8080D1E9F1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42CAB4C6-6F35-4A0C-9C01-A55FDE3B8653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CAB4C6-6F35-4A0C-9C01-A55FDE3B8653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CAB4C6-6F35-4A0C-9C01-A55FDE3B8653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CAB4C6-6F35-4A0C-9C01-A55FDE3B8653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E527EEA-4F43-45F7-ACEA-C8080D1E9F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E527EEA-4F43-45F7-ACEA-C8080D1E9F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E527EEA-4F43-45F7-ACEA-C8080D1E9F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E527EEA-4F43-45F7-ACEA-C8080D1E9F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7069DAC-EA6C-4466-9DF4-0D728116A911}
+	EndGlobalSection
+EndGlobal
